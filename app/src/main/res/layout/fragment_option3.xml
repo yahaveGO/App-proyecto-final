@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.androiddesdecero.tablayout.Option3Fragment">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorgreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_cake"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorpurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_sun"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorblue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_car"
+                tools:ignore="VectorDrawableCompat" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+    </TableLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1500px" />
+
+    <Button
+        android:id="@+id/colores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#000000"
+        android:text="Speak"
+        android:textColor="@color/colorOrange"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

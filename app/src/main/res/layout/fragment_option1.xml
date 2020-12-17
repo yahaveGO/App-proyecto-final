@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.androiddesdecero.tablayout.Option1Fragment">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorwhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorgrisclaro"
+                app:srcCompat="@drawable/color_white"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorblack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_black"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorgray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_gray"
+                tools:ignore="VectorDrawableCompat" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_red"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorblue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_blue"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/coloryellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_yellow"
+                tools:ignore="VectorDrawableCompat" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorgreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_green"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colororange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_orange"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorbrown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_brown"
+                tools:ignore="VectorDrawableCompat" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorpink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_pink"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorviolet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_violet"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorpurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/color_purple"
+                tools:ignore="VectorDrawableCompat" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="560px" />
+
+    <Button
+        android:id="@+id/colores"
+        android:layout_width="900px"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/colorblackchido"
+        android:text="Speak"
+        android:textColor="@color/colorOrange"
+        android:textSize="24sp" />
+
+
+</LinearLayout>
