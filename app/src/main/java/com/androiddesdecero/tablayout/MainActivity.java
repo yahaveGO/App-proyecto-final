@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(new Option1Fragment(), "COLORS");
         viewPagerAdapter.addFragment(new Option2Fragment(), "NUMBERS");
         viewPagerAdapter.addFragment(new Option3Fragment(), "FIGURES");
+        viewPagerAdapter.addFragment(new Option4Fragment(), "ANIMALS");
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
@@ -46,15 +47,19 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()){
                     case 0:
-                        imageView.setImageResource(R.drawable.ic_android);
+                        imageView.setImageResource(R.drawable.color_black);
                         Log.d("TAG1", "Posicion: " + tabLayout.getSelectedTabPosition() + " Titulo: " + viewPagerAdapter.getPageTitle(tabLayout.getSelectedTabPosition()));
                         break;
                     case 1:
-                        imageView.setImageResource(R.drawable.ic_launcher_foreground);
+                        imageView.setImageResource(R.drawable.ic_baseline_exposure_zero_24);
                         Log.d("TAG1", "Posicion: " + tabLayout.getSelectedTabPosition() + " Titulo: " + viewPagerAdapter.getPageTitle(tabLayout.getSelectedTabPosition()));
                         break;
                     case 2:
-                        imageView.setImageResource(R.drawable.ic_baseline_font_download_24);
+                        imageView.setImageResource(R.drawable.figure_star);
+                        Log.d("TAG1", "Posicion: " + tabLayout.getSelectedTabPosition() + " Titulo: " + viewPagerAdapter.getPageTitle(tabLayout.getSelectedTabPosition()));
+                        break;
+                    case 3:
+                        imageView.setImageResource(R.drawable.ic_baseline_emoji_nature_24);
                         Log.d("TAG1", "Posicion: " + tabLayout.getSelectedTabPosition() + " Titulo: " + viewPagerAdapter.getPageTitle(tabLayout.getSelectedTabPosition()));
                         break;
                     default:

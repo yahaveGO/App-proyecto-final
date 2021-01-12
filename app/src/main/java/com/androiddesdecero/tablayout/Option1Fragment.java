@@ -61,15 +61,15 @@ public class Option1Fragment extends Fragment {
         ImageButton colorpurple = (ImageButton) view.findViewById(R.id.colorpurple);
 
         metodoClickColor(colorwhite,"white");
-        metodoClickColor(colorblack,"black ");
-        metodoClickColor(colorgray,"gray ");
-        metodoClickColor(colorred,"red  ");
+        metodoClickColor(colorblack,"black");
+        metodoClickColor(colorgray,"gray");
+        metodoClickColor(colorred,"red");
         metodoClickColor(colorblue,"blue");
         metodoClickColor(coloryellow,"yellow");
         metodoClickColor(colorgreen,"green");
         metodoClickColor(colororange,"orange");
         metodoClickColor(colorbrown,"brown");
-        metodoClickColor(colorpink,"pink ");
+        metodoClickColor(colorpink,"pink");
         metodoClickColor(colorviolet,"violet");
         metodoClickColor(colorpurple,"purple");
 //--------------------------------------------------------------------------------------------------

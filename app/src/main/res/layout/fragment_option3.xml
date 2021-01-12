@@ -13,7 +13,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
 
 
             <Space
@@ -21,11 +22,11 @@
                 android:layout_height="match_parent" />
 
             <ImageButton
-                android:id="@+id/colorgreen"
+                android:id="@+id/colorwhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/figure_cake"
+                app:srcCompat="@drawable/figure_basketball"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
@@ -33,11 +34,44 @@
                 android:layout_height="match_parent" />
 
             <ImageButton
-                android:id="@+id/colorpurple"
+                android:id="@+id/colorblack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/figure_sun"
+                app:srcCompat="@drawable/figure_star"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorgray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_car"
+                tools:ignore="VectorDrawableCompat" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_cloud"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
@@ -49,31 +83,170 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/figure_car"
+                app:srcCompat="@drawable/figure_cake"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/coloryellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_headset"
                 tools:ignore="VectorDrawableCompat" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorgreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_house"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colororange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_key"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorbrown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_laptop"
+                tools:ignore="VectorDrawableCompat" />
 
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorpink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_hand"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorviolet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_phone"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colorpurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_watch"
+                tools:ignore="VectorDrawableCompat" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cienpx">
+
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/coloruno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_pets"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colordos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_sun"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Space
+                android:layout_width="@dimen/cienpx"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/colortres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                app:srcCompat="@drawable/figure_soccer"
+                tools:ignore="VectorDrawableCompat" />
+
+        </TableRow>
+
     </TableLayout>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="1500px" />
+        android:layout_height="100px" />
 
     <Button
         android:id="@+id/colores"
-        android:layout_width="wrap_content"
+        android:layout_width="900px"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#000000"
+        android:background="@color/colorblackchido"
         android:text="Speak"
         android:textColor="@color/colorOrange"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
 
 </LinearLayout>

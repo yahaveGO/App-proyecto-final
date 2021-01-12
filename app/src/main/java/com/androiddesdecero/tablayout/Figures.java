@@ -28,8 +28,7 @@ import org.w3c.dom.Text;
 import java.util.List;
 import java.util.Locale;
 
-
-public class Colors extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class Figures extends AppCompatActivity implements TextToSpeech.OnInitListener {
     private static final int RECOGNIZE_SPEECH_ACTIVITY = 1;
     private TextView tvMensaje;
     private TextToSpeech textToSpeech;
@@ -44,7 +43,7 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
+        setContentView(R.layout.activity_figures);
 //--------------------------------------------------------------------------------------------------
         tvMensaje = findViewById(R.id.tvMensaje);
         textToSpeech = new TextToSpeech(this, this);
@@ -89,6 +88,9 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
         ImageButton colorpink = (ImageButton) findViewById(R.id.colorpink);
         ImageButton colorviolet = (ImageButton) findViewById(R.id.colorviolet);
         ImageButton colorpurple = (ImageButton) findViewById(R.id.colorpurple);
+        ImageButton coloruno = (ImageButton) findViewById(R.id.coloruno);
+        ImageButton colordos = (ImageButton) findViewById(R.id.colordos);
+        //ImageButton colortres = (ImageButton) findViewById(R.id.colortres);
 
         TextView txtwhite = (TextView) findViewById(R.id.txtwhite);
         TextView txtblack = (TextView) findViewById(R.id.txtblack);
@@ -102,6 +104,9 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
         TextView txtpink = (TextView) findViewById(R.id.txtpink);
         TextView txtviolet = (TextView) findViewById(R.id.txtviolet);
         TextView txtpurple = (TextView) findViewById(R.id.txtpurple);
+        TextView txtuno = (TextView) findViewById(R.id.txtuno);
+        TextView txtdos = (TextView) findViewById(R.id.txtdos);
+        //TextView txttres = (TextView) findViewById(R.id.txttres);
 
         clickColor(colorwhite, txtwhite);
         clickColor(colorblack, txtblack);
@@ -115,7 +120,9 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
         clickColor(colorpink, txtpink);
         clickColor(colorviolet, txtviolet);
         clickColor(colorpurple, txtpurple);
-
+        clickColor(coloruno, txtuno);
+        clickColor(colordos, txtdos);
+        //clickColor(colortres, txttres);
 //--------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------
     }
@@ -168,20 +175,23 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
                 if (resultCode == RESULT_OK && data != null) {
                     List<String> coincidencias = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     String cadena = coincidencias.get(0);
-                    String nocolor = "@color/ not found";
+                    String nocolor = "@figure/ not found";
                     /*System.out.println("CADENA: "+cadena+" -> "+cadena.length());//-------------->hablando*/
-                    if (cadena.equalsIgnoreCase("white") ||
-                            cadena.equalsIgnoreCase("black") ||
-                            cadena.equalsIgnoreCase("gray") ||
-                            cadena.equalsIgnoreCase("red") ||
-                            cadena.equalsIgnoreCase("blue") ||
-                            cadena.equalsIgnoreCase("yellow") ||
-                            cadena.equalsIgnoreCase("green") ||
-                            cadena.equalsIgnoreCase("orange") ||
-                            cadena.equalsIgnoreCase("brown") ||
-                            cadena.equalsIgnoreCase("pink") ||
-                            cadena.equalsIgnoreCase("violet") ||
-                            cadena.equalsIgnoreCase("purple")) {
+                    if (cadena.equalsIgnoreCase("basquetbol") ||
+                            cadena.equalsIgnoreCase("star") ||
+                            cadena.equalsIgnoreCase("car") ||
+                            cadena.equalsIgnoreCase("cake") ||
+                            cadena.equalsIgnoreCase("headset") ||
+                            cadena.equalsIgnoreCase("house") ||
+                            cadena.equalsIgnoreCase("key") ||
+                            cadena.equalsIgnoreCase("computer") ||
+                            cadena.equalsIgnoreCase("hand") ||
+                            cadena.equalsIgnoreCase("phone") ||
+                            cadena.equalsIgnoreCase("watch") ||
+                            cadena.equalsIgnoreCase("sun") ||
+                            cadena.equalsIgnoreCase("soccer") ||
+                            cadena.equalsIgnoreCase("cloud") ||
+                            cadena.equalsIgnoreCase("pet")) {
                         tvMensaje.setText(cadena);
                         System.out.println("CADENA: " + cadena + " -> " + cadena.length());//-------------->hablando
                         textToSpeech.setLanguage(new Locale("us", "EU"));

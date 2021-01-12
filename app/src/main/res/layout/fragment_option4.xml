@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:orientation="vertical"
-    tools:context="com.androiddesdecero.tablayout.Option2Fragment">
+    tools:context="com.androiddesdecero.tablayout.Option1Fragment">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -14,11 +14,11 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="@dimen/ciencienpx">
+            android:paddingTop="@dimen/cienpx">
 
 
             <Space
-                android:layout_width="@dimen/ciencienpx"
+                android:layout_width="@dimen/animalscienpx"
                 android:layout_height="match_parent" />
 
             <ImageButton
@@ -26,11 +26,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number1_one"
+                app:srcCompat="@drawable/animals_antelope"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
-                android:layout_width="@dimen/ciencienpx"
+                android:layout_width="@dimen/cienpx"
                 android:layout_height="match_parent" />
 
             <ImageButton
@@ -38,11 +38,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number2_two"
+                app:srcCompat="@drawable/animals_bear"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
-                android:layout_width="@dimen/ciencienpx"
+                android:layout_width="@dimen/cienpx"
                 android:layout_height="match_parent" />
 
             <ImageButton
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number3_three"
+                app:srcCompat="@drawable/animals_crocodile"
                 tools:ignore="VectorDrawableCompat" />
 
         </TableRow>
@@ -58,11 +58,11 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="@dimen/ciencienpx">
+            android:paddingTop="@dimen/cienpx">
 
 
             <Space
-                android:layout_width="@dimen/cienpx"
+                android:layout_width="@dimen/animalscienpx"
                 android:layout_height="match_parent" />
 
             <ImageButton
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number4_four"
+                app:srcCompat="@drawable/animals_elephant"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number5_five"
+                app:srcCompat="@drawable/animals_flemish"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number6_six"
+                app:srcCompat="@drawable/animals_giraffe"
                 tools:ignore="VectorDrawableCompat" />
 
         </TableRow>
@@ -102,11 +102,11 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="@dimen/ciencienpx">
+            android:paddingTop="@dimen/cienpx">
 
 
             <Space
-                android:layout_width="@dimen/cienpx"
+                android:layout_width="@dimen/animalscienpx"
                 android:layout_height="match_parent" />
 
             <ImageButton
@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number7_seven"
+                app:srcCompat="@drawable/animals_lion"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
@@ -126,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number8_eight"
+                app:srcCompat="@drawable/animals_panda"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
@@ -138,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number9_nine"
+                app:srcCompat="@drawable/animals_penguins"
                 tools:ignore="VectorDrawableCompat" />
 
         </TableRow>
@@ -146,11 +146,11 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="@dimen/ciencienpx">
+            android:paddingTop="@dimen/cienpx">
 
 
             <Space
-                android:layout_width="@dimen/cienpx"
+                android:layout_width="@dimen/animalscienpx"
                 android:layout_height="match_parent" />
 
             <ImageButton
@@ -158,7 +158,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number10_ten"
+                app:srcCompat="@drawable/animals_rhino"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
@@ -170,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number11_eleven"
+                app:srcCompat="@drawable/animals_tortoise"
                 tools:ignore="VectorDrawableCompat" />
 
             <Space
@@ -182,7 +182,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                app:srcCompat="@drawable/number12_twelve"
+                app:srcCompat="@drawable/animals_zebra"
                 tools:ignore="VectorDrawableCompat" />
 
         </TableRow>
@@ -191,7 +191,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="570px" />
+        android:layout_height="370px" />
 
     <Button
         android:id="@+id/colores"

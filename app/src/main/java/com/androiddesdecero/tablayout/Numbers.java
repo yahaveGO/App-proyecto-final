@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class Colors extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class Numbers extends AppCompatActivity implements TextToSpeech.OnInitListener {
     private static final int RECOGNIZE_SPEECH_ACTIVITY = 1;
     private TextView tvMensaje;
     private TextToSpeech textToSpeech;
@@ -44,7 +44,7 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
+        setContentView(R.layout.activity_numbers);
 //--------------------------------------------------------------------------------------------------
         tvMensaje = findViewById(R.id.tvMensaje);
         textToSpeech = new TextToSpeech(this, this);
@@ -115,7 +115,6 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
         clickColor(colorpink, txtpink);
         clickColor(colorviolet, txtviolet);
         clickColor(colorpurple, txtpurple);
-
 //--------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------
     }
@@ -168,26 +167,35 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
                 if (resultCode == RESULT_OK && data != null) {
                     List<String> coincidencias = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     String cadena = coincidencias.get(0);
-                    String nocolor = "@color/ not found";
+                    String nocolor = "@number/ not found";
                     /*System.out.println("CADENA: "+cadena+" -> "+cadena.length());//-------------->hablando*/
-                    if (cadena.equalsIgnoreCase("white") ||
-                            cadena.equalsIgnoreCase("black") ||
-                            cadena.equalsIgnoreCase("gray") ||
-                            cadena.equalsIgnoreCase("red") ||
-                            cadena.equalsIgnoreCase("blue") ||
-                            cadena.equalsIgnoreCase("yellow") ||
-                            cadena.equalsIgnoreCase("green") ||
-                            cadena.equalsIgnoreCase("orange") ||
-                            cadena.equalsIgnoreCase("brown") ||
-                            cadena.equalsIgnoreCase("pink") ||
-                            cadena.equalsIgnoreCase("violet") ||
-                            cadena.equalsIgnoreCase("purple")) {
+                    if (cadena.equalsIgnoreCase("one") ||
+                            cadena.equalsIgnoreCase("two") ||
+                            cadena.equalsIgnoreCase("three") ||
+                            cadena.equalsIgnoreCase("four") ||
+                            cadena.equalsIgnoreCase("five") ||
+                            cadena.equalsIgnoreCase("six") ||
+                            cadena.equalsIgnoreCase("seven") ||
+                            cadena.equalsIgnoreCase("eight") ||
+                            cadena.equalsIgnoreCase("nine") ||
+                            cadena.equalsIgnoreCase("ten") ||
+                            cadena.equalsIgnoreCase("eleven") ||
+                            cadena.equalsIgnoreCase("twelve")
+                    ) {
                         tvMensaje.setText(cadena);
                         System.out.println("CADENA: " + cadena + " -> " + cadena.length());//-------------->hablando
                         textToSpeech.setLanguage(new Locale("us", "EU"));
                         speak(cadena);
-                    } else {
+                    } /*else {
                         tvMensaje.setText(nocolor);
+                    }*/
+                    for (int i = 0; i <= 1000000; i++) {
+                        if (cadena.equalsIgnoreCase("" + i + "")) {
+                            tvMensaje.setText(cadena);
+                            System.out.println("CADENA: " + cadena + " -> " + cadena.length());//-------------->hablando
+                            textToSpeech.setLanguage(new Locale("us", "EU"));
+                            speak(cadena);
+                        }
                     }
                 }
 

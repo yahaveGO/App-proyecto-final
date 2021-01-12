@@ -11,22 +11,25 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Option3Fragment extends Fragment {
+/*
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+*/
 
-
-    public Option3Fragment() {
+public class Option4Fragment extends Fragment {
+    public Option4Fragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_option3, container, false);
+        View view = inflater.inflate(R.layout.fragment_option4, container, false);
 //--------------------------------------------------------------------------------------------------
         ImageButton colorwhite  = (ImageButton) view.findViewById(R.id.colorwhite);
         ImageButton colorblack  = (ImageButton) view.findViewById(R.id.colorblack);
@@ -40,25 +43,19 @@ public class Option3Fragment extends Fragment {
         ImageButton colorpink   = (ImageButton) view.findViewById(R.id.colorpink);
         ImageButton colorviolet = (ImageButton) view.findViewById(R.id.colorviolet);
         ImageButton colorpurple = (ImageButton) view.findViewById(R.id.colorpurple);
-        ImageButton coloruno   = (ImageButton) view.findViewById(R.id.coloruno);
-        ImageButton colordos = (ImageButton) view.findViewById(R.id.colordos);
-        ImageButton colortres = (ImageButton) view.findViewById(R.id.colortres);
 
-        metodoClickColor(colorwhite,"basquetbol");
-        metodoClickColor(colorblack,"star");
-        metodoClickColor(colorgray,"car");
-        metodoClickColor(colorred,"cloud");
-        metodoClickColor(colorblue,"cake");
-        metodoClickColor(coloryellow,"headset");
-        metodoClickColor(colorgreen,"house");
-        metodoClickColor(colororange,"key");
-        metodoClickColor(colorbrown,"computer");
-        metodoClickColor(colorpink,"hand");
-        metodoClickColor(colorviolet,"phone");
-        metodoClickColor(colorpurple,"watch");
-        metodoClickColor(coloruno,"pet");
-        metodoClickColor(colordos,"sun");
-        metodoClickColor(colortres,"soccer");
+        metodoClickColor(colorwhite,"antelope");
+        metodoClickColor(colorblack,"bear");
+        metodoClickColor(colorgray,"crocodile");
+        metodoClickColor(colorred,"elephant");
+        metodoClickColor(colorblue,"flemish");
+        metodoClickColor(coloryellow,"giraffe");
+        metodoClickColor(colorgreen,"lion");
+        metodoClickColor(colororange,"panda");
+        metodoClickColor(colorbrown,"penguins");
+        metodoClickColor(colorpink,"rhino");
+        metodoClickColor(colorviolet,"tortoise");
+        metodoClickColor(colorpurple,"zebra");
 //--------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------
         Button colores = (Button) view.findViewById(R.id.colores);
@@ -67,7 +64,7 @@ public class Option3Fragment extends Fragment {
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(getActivity(), Figures.class);
+                Intent intent = new Intent(getActivity(), Animals.class);
                 startActivity(intent);
             }
         });
