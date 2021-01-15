@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androiddesdecero.tablayout">
 
+    <uses-feature android:name="android.hardware.sensor.proximity" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Animals"></activity>
+        <activity android:name=".SensorHang"></activity>
+        <activity android:name=".Animals" />
         <activity android:name=".Figures" />
         <activity android:name=".Numbers" />
         <activity android:name=".Colors" />

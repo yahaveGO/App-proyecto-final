@@ -9,4 +9,16 @@
     <color name="colorOrange">#FFFFFF</color>
     <color name="colorgrisclaro">#F2F3F4</color>
     <color name="colorblackchido">#34495E</color>
+
+    <color name="color1">#CD6155</color>
+    <color name="color2">#AF7AC5</color>
+    <color name="color3">#5499C7</color>
+    <color name="color4">#48C9B0</color>
+    <color name="color5">#52BE80</color>
+    <color name="color6">#F4D03F</color>
+    <color name="color7">#EB984E</color>
+    <color name="color8">#AAB7B8</color>
+    <color name="color9">#5D6D7E</color>
+    <color name="color10">#2C3E50</color>
+
 </resources>

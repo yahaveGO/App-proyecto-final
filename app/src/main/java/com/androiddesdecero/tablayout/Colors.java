@@ -1,11 +1,15 @@
 package com.androiddesdecero.tablayout;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -39,7 +43,19 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
     private SeekBar mSeekBarPitch;
     private SeekBar mSeekBarSpeed;
     private Button mButtonSpeak;
+//--------------------------------------------------------------------------------------------------
+//ObjectAnimator -> Nos proporciona soporte parar animar nuestros objetos
+    private ObjectAnimator animatorX;
+    private ObjectAnimator animatorY;
+    private ObjectAnimator animatorAlpha;
+    private ObjectAnimator animatorRotation;
+    private ObjectAnimator animatorAll;
 
+    private long animationDuration = 1000;
+
+    //AnimatorSet -> Reproduce un conjunto de ObjectAnimator en un orden especificado. Las animaciones pueden ser todas a la vez o secuenciadas
+    private AnimatorSet animatorSet;
+//--------------------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -189,11 +205,61 @@ public class Colors extends AppCompatActivity implements TextToSpeech.OnInitList
                     } else {
                         tvMensaje.setText(nocolor);
                     }
-                }
+//--------------------------------------------------------------------------------------------------
+                    ImageButton colorwhite = (ImageButton) findViewById(R.id.colorwhite);
+                    ImageButton colorblack = (ImageButton) findViewById(R.id.colorblack);
+                    ImageButton colorgray = (ImageButton) findViewById(R.id.colorgray);
+                    ImageButton colorred = (ImageButton) findViewById(R.id.colorred);
+                    ImageButton colorblue = (ImageButton) findViewById(R.id.colorblue);
+                    ImageButton coloryellow = (ImageButton) findViewById(R.id.coloryellow);
+                    ImageButton colorgreen = (ImageButton) findViewById(R.id.colorgreen);
+                    ImageButton colororange = (ImageButton) findViewById(R.id.colororange);
+                    ImageButton colorbrown = (ImageButton) findViewById(R.id.colorbrown);
+                    ImageButton colorpink = (ImageButton) findViewById(R.id.colorpink);
+                    ImageButton colorviolet = (ImageButton) findViewById(R.id.colorviolet);
+                    ImageButton colorpurple = (ImageButton) findViewById(R.id.colorpurple);
 
+
+                    try {
+                        Thread.sleep(1000); //pause
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+
+                    if(cadena.equalsIgnoreCase("white")){
+                        metodoAnimator(colorwhite);
+                    } else if(cadena.equalsIgnoreCase("black")){
+                        metodoAnimator(colorblack);
+                    } else if(cadena.equalsIgnoreCase("gray")){
+                        metodoAnimator(colorgray);
+                    } else if(cadena.equalsIgnoreCase("red")){
+                        metodoAnimator(colorred);
+                    } else if(cadena.equalsIgnoreCase("blue")){
+                        metodoAnimator(colorblue);
+                    } else if(cadena.equalsIgnoreCase("yellow")){
+                        metodoAnimator(coloryellow);
+                    } else if(cadena.equalsIgnoreCase("green")){
+                        metodoAnimator(colorgreen);
+                    } else if(cadena.equalsIgnoreCase("orange")){
+                        metodoAnimator(colororange);
+                    } else if(cadena.equalsIgnoreCase("brown")){
+                        metodoAnimator(colorbrown);
+                    } else if(cadena.equalsIgnoreCase("pink")){
+                        metodoAnimator(colorpink);
+                    } else if(cadena.equalsIgnoreCase("violet")){
+                        metodoAnimator(colorviolet);
+                    } else if(cadena.equalsIgnoreCase("purple")){
+                        metodoAnimator(colorpurple);
+                    }
+//--------------------------------------------------------------------------------------------------
+                }
         }
     }
 
+    private void metodoAnimator(ImageButton color) {
+        Animation animationScale = AnimationUtils.loadAnimation(this, R.anim.scale);
+        color.startAnimation(animationScale);
+    }
 
     @Override
     public void onInit(int status) {

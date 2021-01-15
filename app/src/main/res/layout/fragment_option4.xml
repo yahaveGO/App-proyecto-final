@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     tools:context="com.androiddesdecero.tablayout.Option1Fragment">
 
@@ -198,7 +198,7 @@
         android:layout_width="900px"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/colorblackchido"
+        android:background="@color/colorAccent"
         android:text="Speak"
         android:textColor="@color/colorOrange"
         android:textSize="24sp" />

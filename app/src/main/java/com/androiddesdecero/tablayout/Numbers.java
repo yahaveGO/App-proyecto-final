@@ -1,11 +1,15 @@
 package com.androiddesdecero.tablayout;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -40,7 +44,19 @@ public class Numbers extends AppCompatActivity implements TextToSpeech.OnInitLis
     private SeekBar mSeekBarSpeed;
     private Button mButtonSpeak;
 
+//--------------------------------------------------------------------------------------------------
+//ObjectAnimator -> Nos proporciona soporte parar animar nuestros objetos
+    private ObjectAnimator animatorX;
+    private ObjectAnimator animatorY;
+    private ObjectAnimator animatorAlpha;
+    private ObjectAnimator animatorRotation;
+    private ObjectAnimator animatorAll;
 
+    private long animationDuration = 1000;
+
+    //AnimatorSet -> Reproduce un conjunto de ObjectAnimator en un orden especificado. Las animaciones pueden ser todas a la vez o secuenciadas
+    private AnimatorSet animatorSet;
+//--------------------------------------------------------------------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -186,9 +202,9 @@ public class Numbers extends AppCompatActivity implements TextToSpeech.OnInitLis
                         System.out.println("CADENA: " + cadena + " -> " + cadena.length());//-------------->hablando
                         textToSpeech.setLanguage(new Locale("us", "EU"));
                         speak(cadena);
-                    } /*else {
+                    } else {
                         tvMensaje.setText(nocolor);
-                    }*/
+                    }
                     for (int i = 0; i <= 1000000; i++) {
                         if (cadena.equalsIgnoreCase("" + i + "")) {
                             tvMensaje.setText(cadena);
@@ -197,11 +213,77 @@ public class Numbers extends AppCompatActivity implements TextToSpeech.OnInitLis
                             speak(cadena);
                         }
                     }
-                }
 
+//--------------------------------------------------------------------------------------------------
+                    ImageButton colorwhite = (ImageButton) findViewById(R.id.colorwhite);
+                    ImageButton colorblack = (ImageButton) findViewById(R.id.colorblack);
+                    ImageButton colorgray = (ImageButton) findViewById(R.id.colorgray);
+                    ImageButton colorred = (ImageButton) findViewById(R.id.colorred);
+                    ImageButton colorblue = (ImageButton) findViewById(R.id.colorblue);
+                    ImageButton coloryellow = (ImageButton) findViewById(R.id.coloryellow);
+                    ImageButton colorgreen = (ImageButton) findViewById(R.id.colorgreen);
+                    ImageButton colororange = (ImageButton) findViewById(R.id.colororange);
+                    ImageButton colorbrown = (ImageButton) findViewById(R.id.colorbrown);
+                    ImageButton colorpink = (ImageButton) findViewById(R.id.colorpink);
+                    ImageButton colorviolet = (ImageButton) findViewById(R.id.colorviolet);
+                    ImageButton colorpurple = (ImageButton) findViewById(R.id.colorpurple);
+
+                    try {
+                        Thread.sleep(1000); //pause
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+
+                    if(cadena.equalsIgnoreCase("" + 1 + "")){
+                        metodoAnimator(colorwhite);
+                    } else if(cadena.equalsIgnoreCase("" + 2 + "")){
+                        metodoAnimator(colorgray);
+                    } else if(cadena.equalsIgnoreCase("" + 3 + "")){
+                        metodoAnimator(colorblue);
+                    } else if(cadena.equalsIgnoreCase("" + 4 + "")){
+                        metodoAnimator(colorgreen);
+                    } else if(cadena.equalsIgnoreCase("" + 5 + "")){
+                        metodoAnimator(colorbrown);
+                    } else if(cadena.equalsIgnoreCase("" + 6 + "")){
+                        metodoAnimator(colorviolet);
+                    } else if(cadena.equalsIgnoreCase("" + 7 + "")){
+                        metodoAnimator(colorblack);
+                    } else if(cadena.equalsIgnoreCase("" + 8 + "")){
+                        metodoAnimator(colorred);
+                    } else if(cadena.equalsIgnoreCase("" + 9 + "")){
+                        metodoAnimator(coloryellow);
+                    } else if(cadena.equalsIgnoreCase("" + 10 + "")){
+                        metodoAnimator(colororange);
+                    } else if(cadena.equalsIgnoreCase("" + 11 + "")){
+                        metodoAnimator(colorpink);
+                    } else if(cadena.equalsIgnoreCase("" + 12 + "")){
+                        metodoAnimator(colorpurple);
+                    }
+//--------------------------------------------------------------------------------------------------
+
+                }
         }
     }
 
+    private void metodoAnimator(ImageButton color) {
+        animatorX = ObjectAnimator.ofFloat(color, "x", 300f);
+        animatorX.setDuration(animationDuration);
+        AnimatorSet animatorSetX = new AnimatorSet();
+        animatorSetX.playTogether(animatorX);
+        animatorSetX.start();
+
+        try {
+            Thread.sleep(2000); //pause
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        animatorAlpha = ObjectAnimator.ofFloat(color, View.ALPHA,1.0f, 0.0f);
+        animatorAlpha.setDuration(animationDuration);
+        AnimatorSet animatorSetAlpha = new AnimatorSet();
+        animatorSetAlpha.playTogether(animatorAlpha);
+        animatorSetAlpha.start();
+    }
 
     @Override
     public void onInit(int status) {

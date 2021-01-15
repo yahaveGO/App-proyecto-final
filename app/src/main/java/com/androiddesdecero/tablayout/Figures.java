@@ -1,5 +1,12 @@
 package com.androiddesdecero.tablayout;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
+import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -32,14 +40,25 @@ public class Figures extends AppCompatActivity implements TextToSpeech.OnInitLis
     private static final int RECOGNIZE_SPEECH_ACTIVITY = 1;
     private TextView tvMensaje;
     private TextToSpeech textToSpeech;
-
+//--------------------------------------------------------------------------------------------------
     private TextToSpeech mTTS;
     private EditText mEditText;
     private SeekBar mSeekBarPitch;
     private SeekBar mSeekBarSpeed;
     private Button mButtonSpeak;
+//--------------------------------------------------------------------------------------------------
+//ObjectAnimator -> Nos proporciona soporte parar animar nuestros objetos
+    private ObjectAnimator animatorX;
+    private ObjectAnimator animatorY;
+    private ObjectAnimator animatorAlpha;
+    private ObjectAnimator animatorRotation;
+    private ObjectAnimator animatorAll;
 
+    private long animationDuration = 1000;
 
+    //AnimatorSet -> Reproduce un conjunto de ObjectAnimator en un orden especificado. Las animaciones pueden ser todas a la vez o secuenciadas
+    private AnimatorSet animatorSet;
+//--------------------------------------------------------------------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,9 +143,13 @@ public class Figures extends AppCompatActivity implements TextToSpeech.OnInitLis
         clickColor(colordos, txtdos);
         //clickColor(colortres, txttres);
 //--------------------------------------------------------------------------------------------------
+
 //--------------------------------------------------------------------------------------------------
     }
+//--------------------------------------------------------------------------------------------------
 
+
+    //--------------------------------------------------------------------------------------------------
     private void speak() {
         String text = mEditText.getText().toString();
         float pitch = (float) mSeekBarPitch.getProgress() / 50;
@@ -185,7 +208,7 @@ public class Figures extends AppCompatActivity implements TextToSpeech.OnInitLis
                             cadena.equalsIgnoreCase("house") ||
                             cadena.equalsIgnoreCase("key") ||
                             cadena.equalsIgnoreCase("computer") ||
-                            cadena.equalsIgnoreCase("hand") ||
+
                             cadena.equalsIgnoreCase("phone") ||
                             cadena.equalsIgnoreCase("watch") ||
                             cadena.equalsIgnoreCase("sun") ||
@@ -196,12 +219,72 @@ public class Figures extends AppCompatActivity implements TextToSpeech.OnInitLis
                         System.out.println("CADENA: " + cadena + " -> " + cadena.length());//-------------->hablando
                         textToSpeech.setLanguage(new Locale("us", "EU"));
                         speak(cadena);
+                    }else if(cadena.equalsIgnoreCase("hand")){
+                        Intent intent = new Intent(this, SensorHang.class);
+                        startActivity(intent);
                     } else {
                         tvMensaje.setText(nocolor);
                     }
-                }
+//--------------------------------------------------------------------------------------------------
+                    ImageButton colorwhite = (ImageButton) findViewById(R.id.colorwhite);
+                    ImageButton colorblack = (ImageButton) findViewById(R.id.colorblack);
+                    ImageButton colorgray = (ImageButton) findViewById(R.id.colorgray);
+                    ImageButton colorred = (ImageButton) findViewById(R.id.colorred);
+                    ImageButton colorblue = (ImageButton) findViewById(R.id.colorblue);
+                    ImageButton coloryellow = (ImageButton) findViewById(R.id.coloryellow);
+                    ImageButton colorgreen = (ImageButton) findViewById(R.id.colorgreen);
+                    ImageButton colororange = (ImageButton) findViewById(R.id.colororange);
+                    ImageButton colorbrown = (ImageButton) findViewById(R.id.colorbrown);
+                    ImageButton colorpink = (ImageButton) findViewById(R.id.colorpink);
+                    ImageButton colorviolet = (ImageButton) findViewById(R.id.colorviolet);
+                    ImageButton colorpurple = (ImageButton) findViewById(R.id.colorpurple);
+                    ImageButton coloruno = (ImageButton) findViewById(R.id.coloruno);
+                    ImageButton colordos = (ImageButton) findViewById(R.id.colordos);
 
+                    try {
+                        Thread.sleep(1000); //pause
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+
+                    if(cadena.equalsIgnoreCase("basquetbol")){
+                        metodoAnimator(colorwhite);
+                    } else if(cadena.equalsIgnoreCase("star")){
+                        metodoAnimator(colorpurple);
+                    } else if(cadena.equalsIgnoreCase("car")){
+                        metodoAnimator(colorblue);
+                    } else if(cadena.equalsIgnoreCase("cake")){
+                        metodoAnimator(colorviolet);
+                    } else if(cadena.equalsIgnoreCase("headset")){
+                        metodoAnimator(colordos);
+                    } else if(cadena.equalsIgnoreCase("house")){
+                        metodoAnimator(colorbrown);
+                    } else if(cadena.equalsIgnoreCase("key")){
+                        metodoAnimator(coloryellow);
+                    } else if(cadena.equalsIgnoreCase("computer")){
+                        metodoAnimator(coloruno);
+                    } else if(cadena.equalsIgnoreCase("watch")){
+                        metodoAnimator(colororange);
+                    } else if(cadena.equalsIgnoreCase("sun")){
+                        metodoAnimator(colorgray);
+                    } else if(cadena.equalsIgnoreCase("soccer")){
+                        metodoAnimator(colorblack);
+                    } else if(cadena.equalsIgnoreCase("cloud")){
+                        metodoAnimator(colorred);
+                    } else if(cadena.equalsIgnoreCase("pet")){
+                        metodoAnimator(colorpink);
+                    }
+//--------------------------------------------------------------------------------------------------
+                }
         }
+    }
+
+    private void metodoAnimator(ImageButton color) {
+        animatorRotation = ObjectAnimator.ofFloat(color, "rotation",0f, 720);//360f
+        animatorRotation.setDuration(animationDuration);
+        AnimatorSet animatorSetRotator = new AnimatorSet();
+        animatorSetRotator.playTogether(animatorRotation);
+        animatorSetRotator.start();
     }
 
 

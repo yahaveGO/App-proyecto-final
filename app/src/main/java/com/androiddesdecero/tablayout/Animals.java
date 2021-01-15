@@ -1,5 +1,7 @@
 package com.androiddesdecero.tablayout;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -29,6 +31,19 @@ public class Animals extends AppCompatActivity implements TextToSpeech.OnInitLis
     private SeekBar mSeekBarSpeed;
     private Button mButtonSpeak;
 
+//--------------------------------------------------------------------------------------------------
+//ObjectAnimator -> Nos proporciona soporte parar animar nuestros objetos
+    private ObjectAnimator animatorX;
+    private ObjectAnimator animatorY;
+    private ObjectAnimator animatorAlpha;
+    private ObjectAnimator animatorRotation;
+    private ObjectAnimator animatorAll;
+
+    private long animationDuration = 1000;
+
+    //AnimatorSet -> Reproduce un conjunto de ObjectAnimator en un orden especificado. Las animaciones pueden ser todas a la vez o secuenciadas
+    private AnimatorSet animatorSet;
+//--------------------------------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -178,9 +193,64 @@ public class Animals extends AppCompatActivity implements TextToSpeech.OnInitLis
                     } else {
                         tvMensaje.setText(nocolor);
                     }
-                }
 
+//--------------------------------------------------------------------------------------------------
+                    ImageButton colorwhite = (ImageButton) findViewById(R.id.colorwhite);
+                    ImageButton colorblack = (ImageButton) findViewById(R.id.colorblack);
+                    ImageButton colorgray = (ImageButton) findViewById(R.id.colorgray);
+                    ImageButton colorred = (ImageButton) findViewById(R.id.colorred);
+                    ImageButton colorblue = (ImageButton) findViewById(R.id.colorblue);
+                    ImageButton coloryellow = (ImageButton) findViewById(R.id.coloryellow);
+                    ImageButton colorgreen = (ImageButton) findViewById(R.id.colorgreen);
+                    ImageButton colororange = (ImageButton) findViewById(R.id.colororange);
+                    ImageButton colorbrown = (ImageButton) findViewById(R.id.colorbrown);
+                    ImageButton colorpink = (ImageButton) findViewById(R.id.colorpink);
+                    ImageButton colorviolet = (ImageButton) findViewById(R.id.colorviolet);
+                    ImageButton colorpurple = (ImageButton) findViewById(R.id.colorpurple);
+
+                    try {
+                        Thread.sleep(1000); //pause
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+
+                    if(cadena.equalsIgnoreCase("antelope")){
+                        metodoAnimator(colorwhite);
+                    } else if(cadena.equalsIgnoreCase("crocodile")){
+                        metodoAnimator(colorgray);
+                    } else if(cadena.equalsIgnoreCase("flemish")){
+                        metodoAnimator(colorblue);
+                    } else if(cadena.equalsIgnoreCase("lion")){
+                        metodoAnimator(colorgreen);
+                    } else if(cadena.equalsIgnoreCase("penguin")){
+                        metodoAnimator(colorbrown);
+                    } else if(cadena.equalsIgnoreCase("tortoise")){
+                        metodoAnimator(colorviolet);
+                    } else if(cadena.equalsIgnoreCase("bear")){
+                        metodoAnimator(colorblack);
+                    } else if(cadena.equalsIgnoreCase("elephant")){
+                        metodoAnimator(colorred);
+                    } else if(cadena.equalsIgnoreCase("giraffe")){
+                        metodoAnimator(coloryellow);
+                    } else if(cadena.equalsIgnoreCase("panda")){
+                        metodoAnimator(colororange);
+                    } else if(cadena.equalsIgnoreCase("rhino")){
+                        metodoAnimator(colorpink);
+                    } else if(cadena.equalsIgnoreCase("zebra")){
+                        metodoAnimator(colorpurple);
+                    }
+//--------------------------------------------------------------------------------------------------
+
+                }
         }
+    }
+
+    private void metodoAnimator(ImageButton color) {
+        animatorY = ObjectAnimator.ofFloat(color, "y", 420f);
+        animatorY.setDuration(animationDuration);
+        AnimatorSet animatorSetY = new AnimatorSet();
+        animatorSetY.playTogether(animatorY);
+        animatorSetY.start();
     }
 
 

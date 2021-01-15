@@ -1,5 +1,6 @@
 package com.androiddesdecero.tablayout;
 
+import android.media.MediaPlayer;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private AppBarLayout appBarLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
+    public MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    /*mediaPlayer.create(this,R.raw.song1);
+    mediaPlayer.start();*/
     }
 
 }
