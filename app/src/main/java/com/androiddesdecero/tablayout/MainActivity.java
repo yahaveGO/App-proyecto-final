@@ -26,6 +26,21 @@ public class MainActivity extends AppCompatActivity {
         setUpView();
         setUpViewPagerAdapter();
 
+        mediaPlayer = MediaPlayer.create(this, R.raw.song1);
+        mediaPlayer.start();
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+        }
+
+
     }
 
     private void setUpView(){
@@ -79,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    /*mediaPlayer.create(this,R.raw.song1);
-    mediaPlayer.start();*/
     }
 
 }

@@ -208,7 +208,7 @@ public class Figures extends AppCompatActivity implements TextToSpeech.OnInitLis
                             cadena.equalsIgnoreCase("house") ||
                             cadena.equalsIgnoreCase("key") ||
                             cadena.equalsIgnoreCase("computer") ||
-
+                            cadena.equalsIgnoreCase("cell phone") ||
                             cadena.equalsIgnoreCase("phone") ||
                             cadena.equalsIgnoreCase("watch") ||
                             cadena.equalsIgnoreCase("sun") ||
@@ -219,11 +219,15 @@ public class Figures extends AppCompatActivity implements TextToSpeech.OnInitLis
                         System.out.println("CADENA: " + cadena + " -> " + cadena.length());//-------------->hablando
                         textToSpeech.setLanguage(new Locale("us", "EU"));
                         speak(cadena);
-                    }else if(cadena.equalsIgnoreCase("hand")){
+                    }else {
+                        tvMensaje.setText(nocolor);
+                    }
+                    if(cadena.equalsIgnoreCase("hand")){
                         Intent intent = new Intent(this, SensorHang.class);
                         startActivity(intent);
-                    } else {
-                        tvMensaje.setText(nocolor);
+                    }if(cadena.equalsIgnoreCase("phone") || cadena.equalsIgnoreCase("cell phone") ){
+                        Intent intent = new Intent(this, SensorAcelerometro.class);
+                        startActivity(intent);
                     }
 //--------------------------------------------------------------------------------------------------
                     ImageButton colorwhite = (ImageButton) findViewById(R.id.colorwhite);
